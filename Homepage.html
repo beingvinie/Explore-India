@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore India - Tourism</title>
+    <style>
+        body {
+            background-color: burlywood;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+         margin-bottom: 5px;
+            color: #4b2e12;
+        }
+
+        h2 {
+            color: #5c3b17;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            max-width: 500px;
+            margin: auto;
+            padding-left: 20px;
+        }
+
+        ul li {
+            padding: 6px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #3d220d;
+            transition: 0.2s;
+        }
+
+        ul li a:hover {
+            color: #8b4513;
+        }
+
+        select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #6b4b1e;
+            background: #fff7e6;
+            cursor: pointer;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: #4b2e12;
+            margin: 30px 0;
+            opacity: 0.3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #4b2e12;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Explore India</h1>
+    <hr>
+
+    <h2 style="text-align: center;">Welcome to the Tourism Portal</h2>
+
+    <p>
+        India is a land of diverse cultures, languages, traditions, and breathtaking attractions.
+        This website lets you explore different cities and learn more about their history,
+        food, culture, and must-visit places.
+    </p>
+
+    <img src="India.webp" height="200" alt="Tourism" width="450">
+
+    <h3 style="text-align: center;">Explore Sections</h3>
+
+    <ul>
+        <li><a href="places.html">Places to Visit</a></li>
+        <li><a href="food.html">Popular Foods</a></li>
+        <li><a href="culture.html">Culture & Traditions</a></li>
+    </ul>
+
+    <hr>
+
+    <h3 style="text-align: center;">Select a City</h3>
+    <p style="text-align: center;">Choose a city to explore its tourism page:</p>
+
+    <div style="text-align: center;">
+        <select onchange="location = this.value;">
+            <option value="">-- Choose a City --</option>
+            <option value="mysuru.html">Mysuru</option>
+            <option value="bengaluru.html">Bengaluru</option>
+            <option value="mangaluru.html">Mangaluru</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <footer>
+        © 2025 Explore India Tourism Project
+    </footer>
+
+</body>
+
+</html>
