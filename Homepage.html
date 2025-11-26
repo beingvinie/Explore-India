@@ -1,51 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Explore India - Tourism</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore India - Tourism</title>
+
     <style>
         body {
             background-color: burlywood;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
-         margin-bottom: 5px;
             color: #4b2e12;
+            margin-bottom: 5px;
         }
 
-        h2 {
+        h2, h3 {
             color: #5c3b17;
-            font-weight: 600;
+            margin-top: 20px;
         }
 
         p {
-            max-width: 700px;
-            margin: auto;
+            max-width: 750px;
+            margin: 10px auto;
             line-height: 1.6;
+            font-size: 18px;
         }
 
-    
+        img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
 
         ul {
-            list-style-type: square;
-            max-width: 500px;
-            margin: auto;
-            padding-left: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 300px;
         }
 
         ul li {
-            padding: 6px 0;
+            padding: 10px 0;
         }
 
         ul li a {
             text-decoration: none;
             font-weight: bold;
             color: #3d220d;
+            font-size: 18px;
             transition: 0.2s;
         }
 
@@ -54,27 +65,39 @@
         }
 
         select {
-            padding: 8px 12px;
-            font-size: 16px;
+            padding: 10px;
+            width: 80%;
+            max-width: 250px;
             border-radius: 6px;
             border: 1px solid #6b4b1e;
             background: #fff7e6;
+            font-size: 16px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         hr {
             border: none;
             height: 2px;
             background: #4b2e12;
-            margin: 30px 0;
+            margin: 25px auto;
             opacity: 0.3;
+            width: 90%;
         }
 
         footer {
-            text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
+            padding-bottom: 10px;
             font-size: 14px;
             color: #4b2e12;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 18px; }
+            p  { font-size: 16px; }
         }
     </style>
 </head>
@@ -84,7 +107,7 @@
     <h1>Explore India</h1>
     <hr>
 
-    <h2 style="text-align: center;">Welcome to the Tourism Portal</h2>
+    <h2>Welcome to the Tourism Portal</h2>
 
     <p>
         India is a land of diverse cultures, languages, traditions, and breathtaking attractions.
@@ -92,10 +115,9 @@
         food, culture, and must-visit places.
     </p>
 
-     <img src="India.webp" style="width: 100%; max-width: 600px; border-radius: 10px; align-items: cente;">
+    <img src="India.webp" alt="Explore India">
 
-    <h3 style="text-align: center;">Explore Sections</h3>
-
+    <h3>Explore Sections</h3>
     <ul>
         <li><a href="places.html">Places to Visit</a></li>
         <li><a href="food.html">Popular Foods</a></li>
@@ -104,17 +126,15 @@
 
     <hr>
 
-    <h3 style="text-align: center;">Select a City</h3>
-    <p style="text-align: center;">Choose a city to explore its tourism page:</p>
+    <h3>Select a City</h3>
+    <p>Choose a city to explore its tourism page:</p>
 
-    <div style="text-align: center;">
-        <select onchange="location = this.value;">
-            <option value="">-- Choose a City --</option>
-            <option value="mysuru.html">Mysuru</option>
-            <option value="bengaluru.html">Bengaluru</option>
-            <option value="mangaluru.html">Mangaluru</option>
-        </select>
-    </div>
+    <select onchange="location = this.value;">
+        <option value="">-- Choose a City --</option>
+        <option value="mysuru.html">Mysuru</option>
+        <option value="bengaluru.html">Bengaluru</option>
+        <option value="mangaluru.html">Mangaluru</option>
+    </select>
 
     <hr>
 
@@ -125,3 +145,4 @@
 </body>
 
 </html>
+
