@@ -12,32 +12,35 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
             color: #4b2e12;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            font-size: 28px;
         }
 
         dl {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 18px auto;
             padding: 20px;
             background: #fff0d9;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid #6b4b1e;
+            text-align: left;
         }
 
         dt {
             font-size: 22px;
             font-weight: bold;
             color: #3d220d;
+            margin-bottom: 8px;
         }
 
         dt a {
-            margin-left: 10px;
-            font-size: 16px;
+            margin-left: 12px;
+            font-size: 15px;
             text-decoration: none;
             color: #5a3314;
             background: #fce7c2;
@@ -54,28 +57,50 @@
         dd {
             margin-top: 10px;
             margin-bottom: 5px;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
             color: #3b2a1e;
         }
 
         .back-btn {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .back-btn a {
             text-decoration: none;
             font-weight: bold;
             color: #3d220d;
-            padding: 8px 16px;
+            padding: 10px 20px;
             background: #fff0d9;
             border-radius: 6px;
             border: 1px solid #6b4b1e;
+            font-size: 17px;
             transition: 0.3s;
         }
 
         .back-btn a:hover {
             background: #e4c29f;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            dl {
+                padding: 15px;
+            }
+
+            dt {
+                font-size: 20px;
+            }
+
+            dd {
+                font-size: 15px;
+            }
+
+            .back-btn a {
+                width: 80%;
+                display: inline-block;
+            }
         }
     </style>
 </head>
