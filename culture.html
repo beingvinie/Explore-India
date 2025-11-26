@@ -17,15 +17,26 @@
 
         h1 {
             color: #4b2e12;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 28px;
         }
 
         p {
             max-width: 780px;
-            margin: auto;
+            margin: 10px auto 20px auto;
             line-height: 1.7;
-            font-size: 17px;
+            font-size: 18px;
             color: #3d2b1f;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            margin: 25px auto;
+            display: block;
+            border-radius: 15px;
+            overflow: hidden;
+            background: black;
         }
 
         a {
@@ -34,15 +45,22 @@
             text-decoration: none;
             font-weight: bold;
             color: #3d220d;
-            padding: 8px 16px;
+            padding: 10px 18px;
             background: #fff0d9;
             border-radius: 6px;
             border: 1px solid #6b4b1e;
             transition: 0.3s;
+            font-size: 16px;
         }
 
         a:hover {
             background: #e4c29f;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 23px; }
+            p { font-size: 16px; }
         }
     </style>
 </head>
@@ -57,11 +75,19 @@
         foods, and art forms across different regions. The culture emphasizes respect for elders, delicious and unique
         culinary styles, traditional clothing like sarees and kurta-pajamas, and artistic expressions ranging from
         classical dance to modern Bollywood cinema.
-    </p><br>
-     <video src="bobbbb.mp4"  controls muted style="height: 200px; border-radius: 10px;"></video><br><br><br>
+    </p>
+
+    <!-- IMPORTANT: Ensure file name matches exactly -->
+    <video 
+        src="bobbbb.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+    ></video>
 
     <a href="Homepage.html">Back to Homepage</a>
-    <p></p>
 
 </body>
 
