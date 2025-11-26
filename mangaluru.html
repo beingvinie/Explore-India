@@ -1,94 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangaluru - Tourism</title>
+<title>Mangaluru - Tourism</title>
 
-    <style>
-        body {
-            background-color: burlywood;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
+<style>
+    body {
+        background-color: burlywood;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
 
+    h1 {
+        text-align: center;
+        color: #4b2e12;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+
+    p {
+        max-width: 750px;
+        margin: 10px auto 25px auto;
+        line-height: 1.7;
+        font-size: 18px;
+        text-align: center;
+        color: #3b2a1e;
+    }
+
+    img {
+        width: 100%;
+        max-width: 550px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+
+    /* Responsive YouTube Container */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 650px;
+        margin: 25px auto;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+        height: 0;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+
+    a {
+        display: inline-block;
+        margin: 20px 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #3d220d;
+        padding: 10px 18px;
+        background: #fff0d9;
+        border-radius: 6px;
+        border: 1px solid #6b4b1e;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    a:hover {
+        background: #e4c29f;
+    }
+
+    /* Mobile Enhancements */
+    @media (max-width: 600px) {
         h1 {
-            text-align: center;
-            color: #4b2e12;
+            font-size: 24px;
         }
 
         p {
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.7;
-            font-size: 17px;
-            color: #3b2a1e;
-            text-align: center;
-        }
-
-        img {
-                       width: 100%;
-max-width: 500px;
-margin: auto;
-border-radius:10px
-        }
-
-        iframe {
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
+            font-size: 16px;
+            padding: 0 8px;
         }
 
         a {
-            display: inline-block;
-            margin: 20px 10px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #3d220d;
-            padding: 8px 16px;
-            background: #fff0d9;
-            border-radius: 6px;
-            border: 1px solid #6b4b1e;
-            transition: 0.3s;
+            width: 80%;
+            max-width: 250px;
         }
-
-        a:hover {
-            background: #e4c29f;
-        }
-
-        .container {
-            text-align: center;
-            padding-top: 20px;
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Mangaluru Tourism</h1>
+    <h1>Mangaluru Tourism</h1>
 
-        <p>
-            Mangaluru (Mangalore) is a vibrant coastal city in Karnataka, blending traditional Tulu culture with modern
-            dynamism. It’s perfect for travelers seeking beautiful beaches like Surathkal and Panambur, historic temples
-            and churches, delicious coastal cuisine including Ghee Roast, and lush natural beauty. With its calm vibe,
-            rich heritage, and mouth-watering food, Mangaluru offers a perfect mix of relaxation and exploration.
-        </p>
+    <p>
+        Mangaluru (Mangalore) is a vibrant coastal city in Karnataka, blending traditional Tulu culture with modern
+        dynamism. It’s perfect for travelers seeking beautiful beaches like Surathkal and Panambur, historic temples
+        and churches, delicious coastal cuisine including Ghee Roast, and lush natural beauty. With its calm vibe,
+        rich heritage, and mouth-watering food, Mangaluru offers a perfect mix of relaxation and exploration.
+    </p>
 
-        <img src="manglore.jpg" alt="Mangaluru Beach"> <br>
+    <img src="manglore.jpg" alt="Mangaluru Beach">
 
-        <iframe width="560" height="315"
+    <div class="video-container">
+        <iframe 
             src="https://www.youtube.com/embed/y25sMyhZlj4?si=hexk2QQMKQbrf17b"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
-
-        <a href="Homepage.html">Back to Home</a>
-
     </div>
+
+    <a href="Homepage.html">Back to Home</a>
+
+</div>
 
 </body>
 
