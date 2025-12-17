@@ -141,6 +141,186 @@
     <footer>
         © 2025 Explore India Tourism Project
     </footer>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Option Based Chatbot</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Chat icon */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #401f06;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Chat box */
+.chatbox {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+}
+
+/* Header */
+.chat-header {
+    background: #0d6efd;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Messages */
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.bot, .user {
+    margin: 8px 0;
+    padding: 8px 10px;
+    border-radius: 8px;
+    max-width: 90%;
+    font-size: 14px;
+}
+
+.bot {
+    background: #f1f1f1;
+}
+
+.user {
+    background: #dcf8c6;
+    margin-left: auto;
+}
+
+/* Options */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.options button {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #e9ecef;
+    cursor: pointer;
+    text-align: left;
+}
+
+.options button:hover {
+    background: #d6d8db;
+}
+</style>
+</head>
+
+<body>
+
+<div class="chat-icon" onclick="toggleChat()">💬</div>
+
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">Feel free to ask</div>
+    <div class="chat-messages" id="messages"></div>
+</div>
+
+<script>
+const questions = [
+    {
+        q: "Why you made this website?",
+        a: "I made  this to get a clear idea about how actually website structure works."
+    },
+    {
+        q: "How can I contact you?",
+        a: "You can email us at bmyatri@gmail.com."
+    },
+    {
+        q: "Why only few places and only karnataka?",
+        a: "Ahhh,I just wanted to understand, not intentionally..."
+    },
+    {
+        q: "Your github please.",
+        a: "yeah,it's github.com/beingvinie"
+    }
+];
+
+function toggleChat() {
+    const box = document.getElementById("chatbox");
+    box.style.display = box.style.display === "flex" ? "none" : "flex";
+    if (box.style.display === "flex") startChat();
+}
+
+function startChat() {
+    const messages = document.getElementById("messages");
+    messages.innerHTML = "";
+
+    addBotMessage("Great you are here, how can I help you!!");
+
+    const optionsDiv = document.createElement("div");
+    optionsDiv.className = "options";
+
+    questions.forEach((item, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = item.q;
+        btn.onclick = () => selectOption(index);
+        optionsDiv.appendChild(btn);
+    });
+
+    messages.appendChild(optionsDiv);
+}
+
+function selectOption(index) {
+    const messages = document.getElementById("messages");
+
+    addUserMessage(questions[index].q);
+    addBotMessage(questions[index].a);
+}
+
+function addBotMessage(text) {
+    const messages = document.getElementById("messages");
+    const div = document.createElement("div");
+    div.className = "bot";
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function addUserMessage(text) {
+    const messages = document.getElementById("messages");
+    const div = document.createElement("div");
+    div.className = "user";
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+}
+</script>
+
+</body>
+</html>
 
 </body>
 
